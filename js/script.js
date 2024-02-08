@@ -27,15 +27,24 @@ generoOpcao.forEach((elemento) => {
     });        
 });
 
-async function criarReserva(evento) {
-    evento.preventDefault();    
-
+function dadosFormulario() {
     const poltronas = JSON.stringify(lugarReservado);
     const nome = document.querySelector('[data-nome]').value;
     const email = document.querySelector('[data-email]').value;
-    const genero = generoEscolhido;    
+    const genero = generoEscolhido;
+    const data = new Date().toLocaleString("pt-BR", {timeZone: "America/Sao_Paulo"});
 
-    await conectaApi.criaReserva(poltronas, nome, email, genero);
+    return { poltronas, nome, email, genero, data };
+}
+
+async function criarReserva(evento) {
+    //preventDefault() só será chamado se for enviado o formulário
+    if (evento) {
+        evento.preventDefault();
+    }
+    const { poltronas, nome, email, genero, data } = dadosFormulario();
+    
+    await conectaApi.criaReserva(poltronas, nome, email, genero, data, false);    
     formulario.style.display = 'none';
 }
 
@@ -50,6 +59,10 @@ btnEscolha.forEach((opcao) => {
             }
             
         } else if (opcao.value === 'Cancelar') {
+            const evento = null;
+            const { poltronas, nome, email, genero, data } = dadosFormulario();
+            criarReserva(evento);            
+            await conectaApi.criaReserva(poltronas, nome, email, genero, data, true);            
             formulario.style.display = 'none';
         }
     });
