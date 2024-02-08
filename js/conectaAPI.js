@@ -5,13 +5,49 @@ async function listaReserva() {
     return conexaoConvertida;
 }
 
-async function criaReserva(poltronas, nome, email, genero) {
-    console.log('Função criaReserva chamada');
-
+async function apagaReserva(poltronas) {
     try {
+        //converte de volta para array
         const poltronasArray = JSON.parse(poltronas);
 
-        //Array reservas
+        //Acessa reserva do db.json
+        const reservas = await listaReserva();
+        console.log('Reservas:', reservas); // Adicione este log para verificar as reservas
+
+        poltronasArray.forEach(async poltrona => {
+            const reservaEncontrada = reservas.find(reserva => reserva.poltrona === poltrona);
+            const endpoint = `http://localhost:3000/reservas/${reservaEncontrada.id}`;
+
+            reservaEncontrada.nome = "";
+            reservaEncontrada.email = "";
+            reservaEncontrada.genero = "";
+            reservaEncontrada.data = "";
+            reservaEncontrada.disponivel = true;
+            reservaEncontrada.preReserva = true;
+
+            await fetch(endpoint, {
+                method: "PUT",
+                headers: {
+                    "Content-type": "application/json"
+                },
+                body: JSON.stringify(reservaEncontrada)
+            });
+        });
+
+    } catch (error) {
+        console.error('Erro durante a exclusão:', error);
+        throw error;
+    }
+}
+
+//função que cria a reserva ou a pré reserva
+async function criaReserva(poltronas, nome, email, genero, data, criarPreReserva) {
+
+    try {
+        //converte de volta para array
+        const poltronasArray = JSON.parse(poltronas);
+
+        //Acessa reserva do db.json
         const reservas = await listaReserva();
         console.log('Reservas:', reservas); // Adicione este log para verificar as reservas
 
@@ -28,10 +64,21 @@ async function criaReserva(poltronas, nome, email, genero) {
                 console.log('Endpoint:', endpoint);
 
                 try {
-                    // Atualiza os dados da reserva encontrada
-                    reservaEncontrada.nome = nome;
-                    reservaEncontrada.email = email;
-                    reservaEncontrada.genero = genero;
+                    if (criarPreReserva) {
+                        reservaEncontrada.nome = nome;
+                        reservaEncontrada.email = email;
+                        reservaEncontrada.genero = genero;
+                        reservaEncontrada.data = data;
+                        reservaEncontrada.preReserva = false;
+                    } else {
+                        // Atualiza os dados da reserva encontrada
+                        reservaEncontrada.nome = nome;
+                        reservaEncontrada.email = email;
+                        reservaEncontrada.genero = genero;
+                        reservaEncontrada.data = data;
+                        reservaEncontrada.disponivel = false;
+                        reservaEncontrada.preReserva = false;
+                    }
 
                     // Atualiza a reserva no servidor
                     console.log('Antes da requisição PUT');
@@ -58,5 +105,5 @@ async function criaReserva(poltronas, nome, email, genero) {
 }
 
 export const conectaApi = {
-    criaReserva, listaReserva
+    criaReserva, listaReserva, apagaReserva
 }
