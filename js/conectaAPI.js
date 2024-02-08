@@ -1,6 +1,6 @@
 async function listaReserva() {
     //sem especificar o método por padrão a requisição será GET
-    const conexao = await fetch("http://localhost:3000/reservas");
+    const conexao = await fetch("https://json-server-theta-drab.vercel.app/reservas");
     const conexaoConvertida = await conexao.json();
     return conexaoConvertida;
 }
@@ -16,7 +16,7 @@ async function apagaReserva(poltronas) {
 
         poltronasArray.forEach(async poltrona => {
             const reservaEncontrada = reservas.find(reserva => reserva.poltrona === poltrona);
-            const endpoint = `http://localhost:3000/reservas/${reservaEncontrada.id}`;
+            const endpoint = `https://json-server-theta-drab.vercel.app/reservas/${reservaEncontrada.id}`;
 
             reservaEncontrada.nome = "";
             reservaEncontrada.email = "";
@@ -60,7 +60,7 @@ async function criaReserva(poltronas, nome, email, genero, data, criarPreReserva
 
             if (reservaEncontrada) {
                 // Log do endpoint antes da requisição
-                const endpoint = `http://localhost:3000/reservas/${reservaEncontrada.id}`;
+                const endpoint = `https://json-server-theta-drab.vercel.app/reservas/${reservaEncontrada.id}`;
                 console.log('Endpoint:', endpoint);
 
                 try {
