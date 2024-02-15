@@ -16,10 +16,15 @@ na Alura onde eu faço meus cursos de progamação, tem um guia ensinando a inst
 
 2. Agora você precisará instalar o `JSON Server`.
 O Json Server é uma biblioteca do NodeJS
-e para instalar basta digitar o seguinte código no terminal do seu projeto e apertar "Enter"
+e para instalar será via `NPM` para simular uma `API REST`.
+O ´json-server´ é um pacote que nos ajuda a simular um servidor.
+Para instalar basta digitar os seguintes códigos no terminal do seu projeto e apertar "Enter"
 
 ```
 npm init
+npm install json-server
+```
+```
 npm install json-server
 ```
 3. Criar o `banco de dados` (localmente).
