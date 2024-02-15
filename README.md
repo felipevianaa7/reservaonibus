@@ -2,9 +2,6 @@
  
 Utilizando o JSON Server para criar requisições de uma API Fake
 
-## <p style="width: 600px; height: 1200px; padding-top: 30px;">(![print do site](https://github.com/felipevianaa7/reservaonibus/assets/53532151/ba2862fa-097b-49cf-beae-10c96a346b0a)
-)</p>
-
 ## Tecnologias:
 - HTML
 - CSS
@@ -43,6 +40,30 @@ json-server --watch db.json
 Ele precisa localizar o diretório do arquivo do banco de dados
 
 ## Como funciona o sistema
+## <p style="width: 600px; height: 1200px; padding-top: 30px;">(![print do site](https://github.com/felipevianaa7/reservaonibus/assets/53532151/ba2862fa-097b-49cf-beae-10c96a346b0a)
+</p>
+
+São 16 botões indicados por uma cor, verde mostra os disponíveis e vermelho os ocupados.
+Ao clicar no botão que está disponível, ele passa para a cor amarelo indicando que foi selecionado.
+após o  clique vai aparecer a opção do botão `Reservar`, pode selecionar mais de um para a reservar.
+
+Depois de definir a reserva será aberto um formulário, nele é preciso preencher todos os dados. Existem duas opções,
+de `Enviar` e `Cancelar`.
+
+## <p style="width: 600px; height: 1200px; padding-top: 30px;">(![print do formulario](https://github.com/felipevianaa7/reservaonibus/assets/53532151/82807d16-530d-42df-884d-ab1384327cfd)
+
+</p>
+
+## Pré reserva
+Cancelando ele também faz uma requisição com a API, ele obtem as informações que foram escritas no formulário e consegue fazer uma 
+`pré reserva`. É apenas um demostrativo, mas a ideía é que se o site fosse real, na hora do pagamento o sistema reservasse a vaga
+até a confirmação da compra, evitando conflitos com outros clientes.
+
+
+
+
+
+
 
 
 
