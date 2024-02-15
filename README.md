@@ -45,7 +45,7 @@ Ele precisa localizar o diretório do arquivo do banco de dados
 
 São 16 botões indicados por uma cor, verde mostra os disponíveis e vermelho os ocupados.
 Ao clicar no botão que está disponível, ele passa para a cor amarelo indicando que foi selecionado.
-após o  clique vai aparecer a opção do botão `Reservar`, pode selecionar mais de um para a reservar.
+após o  clique vai aparecer a opção do botão `Reservar`, pode selecionar mais de um para a reserva.
 
 Depois de definir a reserva será aberto um formulário, nele é preciso preencher todos os dados. Existem duas opções,
 de `Enviar` e `Cancelar`.
