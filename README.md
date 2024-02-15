@@ -1,4 +1,6 @@
 ## Sistema de reservas de poltronas de ônibus
+[Clique aqui para acessar o site](https://reservaonibus-git-main-felipevianaa7.vercel.app/)
+
  
 Utilizando o JSON Server para criar requisições de uma API Fake
 
@@ -29,6 +31,7 @@ Depois
 npm install json-server
 ```
 3. Criar o `banco de dados` (localmente). Ele está com o nome `db.json` e ali será armazenado as informações das reservas
+
 
 4. Iniciando o `JSON Server`.Toda vez que for usar as requisições da API é preciso ir no terminal e digitar
 o seguinte comando:
