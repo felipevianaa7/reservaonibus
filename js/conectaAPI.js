@@ -31,6 +31,7 @@ async function apagaReserva(poltronas) {
                     "Content-type": "application/json"
                 },
                 body: JSON.stringify(reservaEncontrada)
+                location.reload()
             });
         });
 
@@ -92,6 +93,7 @@ async function criaReserva(poltronas, nome, email, genero, data, criarPreReserva
                     });
 
                     console.log('Atualização bem-sucedida');
+                    location.reload()
                 } catch (error) {
                     console.error('Erro durante a atualização:', error);
                 }
