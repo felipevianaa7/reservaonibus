@@ -28,20 +28,15 @@ Depois
 ```
 npm install json-server
 ```
-3. Criar o `banco de dados` (localmente).
+3. Criar o `banco de dados` (localmente). Ele está com o nome `db.json` e ali será armazenado as informações das reservas
 
-
-Ele está com o nome `db.json` e ali será armazenado as informações das reservas
-
-5. Iniciando o `JSON Server`.
-
-Toda vez que for usar as requisições da API é preciso ir no terminal e digitar
+4. Iniciando o `JSON Server`.Toda vez que for usar as requisições da API é preciso ir no terminal e digitar
 o seguinte comando:
 
 ```
 json-server --watch db.json
 ```
-Ele precisa localizar o diretório do arquivo do banco de dados
+Ele precisa localizar o diretório do arquivo do banco de dados, como não tem pasta é apenas o `db.json`
 
 ## Como funciona o sistema
 ## <p style="width: 600px; height: 1200px; padding-top: 30px;">![print do site](https://github.com/felipevianaa7/reservaonibus/assets/53532151/ba2862fa-097b-49cf-beae-10c96a346b0a)
