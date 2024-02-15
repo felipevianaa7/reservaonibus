@@ -40,7 +40,7 @@ json-server --watch db.json
 Ele precisa localizar o diretório do arquivo do banco de dados
 
 ## Como funciona o sistema
-## <p style="width: 600px; height: 1200px; padding-top: 30px;">(![print do site](https://github.com/felipevianaa7/reservaonibus/assets/53532151/ba2862fa-097b-49cf-beae-10c96a346b0a)
+## <p style="width: 600px; height: 1200px; padding-top: 30px;">![print do site](https://github.com/felipevianaa7/reservaonibus/assets/53532151/ba2862fa-097b-49cf-beae-10c96a346b0a)
 </p>
 
 São 16 botões indicados por uma cor, verde mostra os disponíveis e vermelho os ocupados.
@@ -50,7 +50,7 @@ após o  clique vai aparecer a opção do botão `Reservar`, pode selecionar mai
 Depois de definir a reserva será aberto um formulário, nele é preciso preencher todos os dados. Existem duas opções,
 de `Enviar` e `Cancelar`.
 
-## <p style="width: 600px; height: 1200px; padding-top: 30px;">(![print do formulario](https://github.com/felipevianaa7/reservaonibus/assets/53532151/82807d16-530d-42df-884d-ab1384327cfd)
+## <p style="width: 600px; height: 1200px; padding-top: 30px;">![print do formulario](https://github.com/felipevianaa7/reservaonibus/assets/53532151/82807d16-530d-42df-884d-ab1384327cfd)
 
 </p>
 
