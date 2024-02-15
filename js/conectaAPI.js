@@ -30,11 +30,10 @@ async function apagaReserva(poltronas) {
                 headers: {
                     "Content-type": "application/json"
                 },
-                body: JSON.stringify(reservaEncontrada)
-                location.reload()
+                body: JSON.stringify(reservaEncontrada)                
             });
         });
-
+        location.reload();
     } catch (error) {
         console.error('Erro durante a exclusão:', error);
         throw error;
