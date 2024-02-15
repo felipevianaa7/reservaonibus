@@ -87,9 +87,9 @@ atualizando as poltronas no site.
 
 ## Sugestões
 
-1.Mudar o layout do site, design não é o meu forte, mais irei melhorar mais pra frente.
+1. Mudar o layout do site, design não é o meu forte, mais irei melhorar mais pra frente.
 
-2.Acrescentar um botão para cancelar as poltronas marcadas.
+2. Acrescentar um botão para cancelar as poltronas marcadas.
 
 3. Enviar email para a pessoa confirmando a reserva da poltrona.
  
