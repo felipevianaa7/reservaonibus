@@ -7,14 +7,10 @@ async function listaReserva() {
 
 async function apagaReserva(poltronas) {
     try {
-        //converte de volta para array
         const poltronasArray = JSON.parse(poltronas);
-
-        //Acessa reserva do db.json
         const reservas = await listaReserva();
-        console.log('Reservas:', reservas); // Adicione este log para verificar as reservas
 
-        poltronasArray.forEach(async poltrona => {
+        for (const poltrona of poltronasArray) {
             const reservaEncontrada = reservas.find(reserva => reserva.poltrona === poltrona);
             const endpoint = `https://json-server-alpha-gules.vercel.app/reservas/${reservaEncontrada.id}`;
 
@@ -30,9 +26,10 @@ async function apagaReserva(poltronas) {
                 headers: {
                     "Content-type": "application/json"
                 },
-                body: JSON.stringify(reservaEncontrada)                
+                body: JSON.stringify(reservaEncontrada)
             });
-        });
+        }
+
         location.reload();
     } catch (error) {
         console.error('Erro durante a exclusão:', error);
@@ -41,63 +38,44 @@ async function apagaReserva(poltronas) {
 }
 
 //função que cria a reserva ou a pré reserva
+
 async function criaReserva(poltronas, nome, email, genero, data, criarPreReserva) {
-
     try {
-        //converte de volta para array
         const poltronasArray = JSON.parse(poltronas);
-
-        //Acessa reserva do db.json
         const reservas = await listaReserva();
-        console.log('Reservas:', reservas); // Adicione este log para verificar as reservas
 
-        //Percorrer o array poltronasArray
-        poltronasArray.forEach(async poltrona => {
-            console.log('Poltrona:', poltrona);
-            // Encontra o objeto de reserva correspondente
+        for (const poltrona of poltronasArray) {
             const reservaEncontrada = reservas.find(reserva => reserva.poltrona === poltrona);
-            console.log('Reserva encontrada:', reservaEncontrada);
 
             if (reservaEncontrada) {
-                // Log do endpoint antes da requisição
                 const endpoint = `https://json-server-alpha-gules.vercel.app/reservas/${reservaEncontrada.id}`;
-                console.log('Endpoint:', endpoint);
 
-                try {
-                    if (criarPreReserva) {
-                        reservaEncontrada.nome = nome;
-                        reservaEncontrada.email = email;
-                        reservaEncontrada.genero = genero;
-                        reservaEncontrada.data = data;
-                        reservaEncontrada.preReserva = false;
-                    } else {
-                        // Atualiza os dados da reserva encontrada
-                        reservaEncontrada.nome = nome;
-                        reservaEncontrada.email = email;
-                        reservaEncontrada.genero = genero;
-                        reservaEncontrada.data = data;
-                        reservaEncontrada.disponivel = false;
-                        reservaEncontrada.preReserva = false;
-                    }
-
-                    // Atualiza a reserva no servidor
-                    console.log('Antes da requisição PUT');
-
-                    await fetch(endpoint, {
-                        method: "PUT",
-                        headers: {
-                            "Content-type": "application/json"
-                        },
-                        body: JSON.stringify(reservaEncontrada)
-                    });
-
-                    console.log('Atualização bem-sucedida');
-                    location.reload()
-                } catch (error) {
-                    console.error('Erro durante a atualização:', error);
+                if (criarPreReserva) {
+                    reservaEncontrada.nome = nome;
+                    reservaEncontrada.email = email;
+                    reservaEncontrada.genero = genero;
+                    reservaEncontrada.data = data;
+                    reservaEncontrada.preReserva = false;
+                } else {
+                    reservaEncontrada.nome = nome;
+                    reservaEncontrada.email = email;
+                    reservaEncontrada.genero = genero;
+                    reservaEncontrada.data = data;
+                    reservaEncontrada.disponivel = false;
+                    reservaEncontrada.preReserva = false;
                 }
+
+                await fetch(endpoint, {
+                    method: "PUT",
+                    headers: {
+                        "Content-type": "application/json"
+                    },
+                    body: JSON.stringify(reservaEncontrada)
+                });
             }
-        });
+        }
+
+        location.reload();
         return { status: "Atualização bem-sucedida" };
     } catch (error) {
         console.error('Erro na função criaReserva:', error);
