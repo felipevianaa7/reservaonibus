@@ -19,8 +19,20 @@ O Json Server é uma biblioteca do NodeJS
 e para instalar basta digitar o seguinte código no terminal do seu projeto e apertar "Enter"
 
 ```
-npm install -g json-server
+npm init
+npm install json-server
 ```
-3. Criar o banco de dados.
-O banco de dados es
+3. Criar o `banco de dados` (localmente).
+Ele está com o nome `db.json` e ali será armazenado as informações das reservas
+
+4. Iniciando o `JSON Server`. Toda vez que for usar as requisições da API é preciso ir no terminal e digitar
+o seguinte comando:
+
+```
+json-server --watch db.json
+```
+Ele precisa localizar o diretório do arquivo do banco de dados
+
+## Como funciona o sistema
+
 
