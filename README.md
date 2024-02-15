@@ -92,7 +92,7 @@ atualizando as poltronas no site.
 2.Acrescentar um botão para cancelar as poltronas marcadas.
 
 3. Enviar email para a pessoa confirmando a reserva da poltrona.
-   
+ 
 4. Colocar uma simulação de pagamento para melhorar a parte de pré-reserva do sistema.
 
 
