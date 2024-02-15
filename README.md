@@ -17,6 +17,8 @@ na Alura onde eu faço meus cursos de progamação, tem um guia ensinando a inst
 2. Agora você precisará instalar o JSON Server
 O Json Server é uma biblioteca do NodeJS
 e para instalar basta digitar o seguinte código no terminal do seu projeto e apertar "Enter"
-```npm install -g json-server
+
+```
+npm install -g json-server
 ```
 
