@@ -22,8 +22,9 @@ Para instalar basta digitar os seguintes códigos no terminal do seu projeto e a
 
 ```
 npm init
-npm install json-server
 ```
+Depois
+
 ```
 npm install json-server
 ```
