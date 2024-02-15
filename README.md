@@ -20,14 +20,14 @@ e para instalar será via `NPM` para simular uma `API REST`.
 O ´json-server´ é um pacote que nos ajuda a simular um servidor.
 Para instalar basta digitar os seguintes códigos no terminal do seu projeto e apertar "Enter"
 
-```
-npm init
-```
+ ```
+ npm init
+ ```
 Depois
 
-```
-npm install json-server
-```
+ ```
+ npm install json-server
+ ```
 3. Criar o `banco de dados` (localmente).
 Ele está com o nome `db.json` e ali será armazenado as informações das reservas
 
