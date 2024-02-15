@@ -52,8 +52,7 @@ btnEscolha.forEach((opcao) => {
     opcao.addEventListener("click", async () => {        
         if (opcao.value === 'Enviar') {
             try {
-                formulario.addEventListener("submit", evento => criarReserva(evento));
-		location.reload()
+                formulario.addEventListener("submit", evento => criarReserva(evento));		
             } catch (error) {
                 console.error('Erro ao enviar reserva:', error);
 				alert('Ocorreu um erro ao enviar a reserva. Por favor, tente novamente.');
@@ -64,9 +63,7 @@ btnEscolha.forEach((opcao) => {
             const { poltronas, nome, email, genero, data } = dadosFormulario();
             criarReserva(evento);            
             await conectaApi.criaReserva(poltronas, nome, email, genero, data, true);            
-            formulario.style.display = 'none';
-            location.reload()		
-		
+            formulario.style.display = 'none';		
         }
     });
 });
