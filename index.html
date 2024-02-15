@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="../js/listaReserva.js" type="module"></script>
+    <title>Reservas Fácil</title>
+</head>
+
+<body>
+    
+    <h1>Faça sua reserva</h1>
+    <div class="bus">
+        <div class="fila">
+            <div class="btn-poltrona" value="1"><span>1</span></div>
+            <div class="btn-poltrona"><span>2</span></div>
+            <div class="btn-poltrona"><span>3</span></div>
+            <div class="btn-poltrona"><span>4</span></div>
+        </div>
+        <div class="fila">
+            <div class="btn-poltrona"><span>5</span></div>
+            <div class="btn-poltrona"><span>6</span></div>
+            <div class="btn-poltrona"><span>7</span></div>
+            <div class="btn-poltrona"><span>8</span></div>
+        </div>
+        <div class="fila">
+            <div class="btn-poltrona"><span>9</span></div>
+            <div class="btn-poltrona"><span>10</span></div>
+            <div class="btn-poltrona"><span>11</span></div>
+            <div class="btn-poltrona"><span>12</span></div>
+        </div>
+        <div class="fila">
+            <div class="btn-poltrona"><span>13</span></div>
+            <div class="btn-poltrona"><span>14</span></div>
+            <div class="btn-poltrona"><span>15</span></div>
+            <div class="btn-poltrona"><span>16</span></div>
+        </div>
+    </div>
+    <div class="selecionar">
+        <div class="poltronas-selecionadas">
+            <h1 id="qt-poltronas">0</h1>
+            <h1>Poltrona(s) selecionada(s)</h1>
+        </div>        
+        <button class="btn-reserva" type="button">Reservar</button>        
+    </div>
+    <!-- Formulario -->
+    <form action="#" method="post" id="popup">
+        <!-- Campo de Nome Completo -->
+        <div>
+            <label for="nome">Nome Completo:</label>
+            <input type="text" name="nome" id="nome" data-nome required>
+        </div>
+        <br>
+        <!-- Campo de Email -->
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" data-email required>
+        </div>
+        <br>
+        <!-- Campo de Sexo -->
+        <div>
+            <label>Gênero:</label>
+            <br>
+            <label><input type="radio" name="sexo" value="Homem" data-genero> Homem</label>
+            <br>
+            <label><input type="radio" name="sexo" value="Mulher" data-genero> Mulher</label>
+            <br>
+            <label><input type="radio" name="sexo" value="Oculto" data-genero> Prefiro não dizer</label>
+            <br>
+            <label><input type="radio" name="sexo" value="Outro" id="gen-outroCheckBox" data-genero> Outro</label>
+            <br>
+            <input type="text" id="gen-outro" name="sexo" placeholder="Especifique" style="display: none;" data-genero>
+            <br>
+        </div>
+        <br>
+        <!-- Botão de Envio -->
+        <div id="buttons-container">
+            <input class="btn-escolha" type="submit" value="Enviar">
+            <input class="btn-escolha" type="button" value="Cancelar">
+        </div>
+    </form>
+
+    <script src="../js/script.js" type="module"></script>    
+</body>
+</html>

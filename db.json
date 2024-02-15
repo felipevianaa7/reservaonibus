@@ -1,0 +1,164 @@
+{
+  "reservas": [
+    {
+      "id": "1",
+      "poltrona": 1,
+      "nome": "",
+      "data": "",
+      "email": "",
+      "genero": "",
+      "disponivel": true,
+      "preReserva": true
+    },
+    {
+      "id": "2",
+      "poltrona": 2,
+      "nome": "",
+      "data": "",
+      "email": "",
+      "genero": "",
+      "disponivel": true,
+      "preReserva": true
+    },
+    {
+      "id": "3",
+      "poltrona": 3,
+      "nome": "",
+      "data": "",
+      "email": "",
+      "genero": "",
+      "disponivel": true,
+      "preReserva": true
+    },
+    {
+      "id": "4",
+      "poltrona": 4,
+      "nome": "",
+      "data": "",
+      "email": "",
+      "genero": "",
+      "disponivel": true,
+      "preReserva": true
+    },
+    {
+      "id": "5",
+      "poltrona": 5,
+      "nome": "",
+      "data": "",
+      "email": "",
+      "genero": "",
+      "disponivel": true,
+      "preReserva": true
+    },
+    {
+      "id": "6",
+      "poltrona": 6,
+      "nome": "",
+      "data": "",
+      "email": "",
+      "genero": "",
+      "disponivel": true,
+      "preReserva": true
+    },
+    {
+      "id": "7",
+      "poltrona": 7,
+      "nome": "Felipe Viana",
+      "data": "08/02/2024, 14:19:00",
+      "email": "felipecelsius@gmail.com",
+      "genero": "Homem",
+      "disponivel": false,
+      "preReserva": false
+    },
+    {
+      "id": "8",
+      "poltrona": 8,
+      "nome": "Gnomo Novo",
+      "data": "08/02/2024, 16:53:47",
+      "email": "gnomos@hotmail.com",
+      "genero": "Homem",
+      "disponivel": false,
+      "preReserva": false
+    },
+    {
+      "id": "9",
+      "poltrona": 9,
+      "nome": "",
+      "data": "",
+      "email": "",
+      "genero": "",
+      "disponivel": true,
+      "preReserva": true
+    },
+    {
+      "id": "10",
+      "poltrona": 10,
+      "nome": "",
+      "data": "",
+      "email": "",
+      "genero": "",
+      "disponivel": true,
+      "preReserva": true
+    },
+    {
+      "id": "11",
+      "poltrona": 11,
+      "nome": "",
+      "data": "",
+      "email": "",
+      "genero": "",
+      "disponivel": true,
+      "preReserva": true
+    },
+    {
+      "id": "12",
+      "poltrona": 12,
+      "nome": "",
+      "data": "",
+      "email": "",
+      "genero": "",
+      "disponivel": true,
+      "preReserva": true
+    },
+    {
+      "id": "13",
+      "poltrona": 13,
+      "nome": "",
+      "data": "",
+      "email": "",
+      "genero": "",
+      "disponivel": true,
+      "preReserva": true
+    },
+    {
+      "id": "14",
+      "poltrona": 14,
+      "nome": "",
+      "data": "",
+      "email": "",
+      "genero": "",
+      "disponivel": true,
+      "preReserva": true
+    },
+    {
+      "id": "15",
+      "poltrona": 15,
+      "nome": "",
+      "data": "",
+      "email": "",
+      "genero": "",
+      "disponivel": true,
+      "preReserva": true
+    },
+    {
+      "id": "16",
+      "poltrona": 16,
+      "nome": "",
+      "data": "",
+      "email": "",
+      "genero": "",
+      "disponivel": true,
+      "preReserva": true
+    }
+  ]
+}
