@@ -68,7 +68,7 @@ Acesse o site do [Vercel](https://vercel.com), voce pode vincular sua conta do G
 Por lá você pode fazer o deploy do seu repositório lá para ele ficar online
 (No YouTube tem vídeos ensinando a fazer o deploy)
 
-Você vai precisar agora clonar meu repositório para o seu GitHub, pode acessar aqui [json-server]([https://vercel.com](https://github.com/felipevianaa7/json-server)https://github.com/felipevianaa7/json-server)
+Você vai precisar agora clonar meu repositório para o seu GitHub, pode acessar aqui [json-server](https://github.com/felipevianaa7/json-server)
 O arquivo `db.json` desse repositório será o banco de dados do repositório que foi feito o deploy no Vercel.
 Agora você também fará o deploy no Vercel desse repositório que foi clonado. 
 
